@@ -3,7 +3,7 @@ import { repair_icon_img, prevention_icon_img, service_icon_img } from '../Asset
 
 const Services = () => {
     return (
-        <section className='my-16 md:my-24'>
+        <section id='services' className='my-16 md:my-24'>
             <div className="container">
                 <h1 className='font-russo text-[28px] md:text-5xl font-normal  -tracking-[0.96px]'>Наши услуги</h1>
 

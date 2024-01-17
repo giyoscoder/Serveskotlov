@@ -57,18 +57,18 @@ const Superiority = () => {
 
                     </div>
 
-                    <div className='md:hidden my-12'>
+                    {/* <div className='md:hidden my-12'>
                         <button className=' bg-mainColor py-3 px-5 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-base'>Вызвать мастера</span></button>
-                    </div>
+                    </div> */}
                     
                     <div>
-                        <img src={service_img} alt='servise_img' className='mx-auto' />
+                        <img src={service_img} alt='servise_img' className='mx-auto mt-10' />
                     </div>
 
                 </div>
 
-                <div className='hidden md:block fixed bottom-5 left-1/2 -translate-x-[50%]'>
-                    <button className=' bg-mainColor py-3 px-5 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-base'>Вызвать мастера</span></button>
+                <div className='block fixed bottom-5 left-1/2 -translate-x-[50%]'>
+                    <button className='bg-mainColor w-full py-3 px-5 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-xs sm:text-base'>Вызвать мастера</span></button>
                 </div>
             </div>
         </section>

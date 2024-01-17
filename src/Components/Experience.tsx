@@ -3,7 +3,7 @@ import {experience_img} from '../Assets/Images';
 
 const Experience = () => {
     return (
-        <section className='py-24 bg-[#F9FAFB] '>
+        <section id='about' className='py-24 bg-[#F9FAFB] '>
             <div className="container">
                 <div className='md:flex items-center justify-between lg:gap-16'>
                     <div className='basis-1/2 md:px-8'>

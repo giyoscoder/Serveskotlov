@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <section>
+    <section id='contact'>
         <div className="container">
             <div className="bg-[#F9FAFB] rounded-2xl py-10 px-6 md:py-16 text-center">
                 <p className='text-[28px] text-5xl text-darkColor font-russo font-normal leading-[44px] -tracking-[0.96px]'>Оставьте заявку</p>
