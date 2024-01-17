@@ -6,20 +6,21 @@ import { service_img } from '../Assets/Images'
 
 const Superiority = () => {
     return (
-        <section className='pt-24'>
+        <section className='pt-16 md:pt-24'>
             <div className="container">
                 <div>
-                    <h1 className='font-russo text-darkColor text-5xl font-normal leading-[44px] -tracking-[0.96px]'>Почему выбирают нас</h1>
-                    <p className='font-jura text-lightColor text-xl font-normal leading-[30px] max-w-[511px] mt-5'>Наш сервисный центр ориентирован на удовлетворение потребностей наших клиентов</p>
+                    <h1 className='font-russo text-darkColor text-[28px] md:text-5xl font-normal leading-[38px] md:leading-[44px] -tracking-[0.96px]'>Почему выбирают нас</h1>
+                    <p className='font-jura text-lightColor text-lg md:text-xl font-normal leading-7 md:leading-[30px] max-w-[511px] mt-4 md:mt-5'>Наш сервисный центр ориентирован на удовлетворение потребностей наших клиентов</p>
                 </div>
-                <div className='py-16 flex items-center justify-between'>
-                    <div className='space-y-12'>
+
+                <div className='py-16 flex flex-col  md:flex-row md:items-center justify-between'>
+                    <div className='space-y-10 md:space-y-12'>
                         <div className='flex items-center gap-4'>
                             <div className='bg-[#F0F0FF] p-[6px] rounded-full inline-block'>
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiStar size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-[32px] text-darkColor font-bold'>Качество</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Качество</p>
                                 <p className='text-base text-lightColor font-normal leading-6'>Наш сервисный центр обслужит ваш звонок в любое время</p>
                             </div>
                         </div>
@@ -29,7 +30,7 @@ const Superiority = () => {
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiDeliveryTruck size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-[32px] text-darkColor font-bold'>Быстрый выезд</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Быстрый выезд</p>
                                 <p className='text-base text-lightColor font-normal leading-6'>Выезд мастеров в день звонка</p>
                             </div>
                         </div>
@@ -39,7 +40,7 @@ const Superiority = () => {
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiSearch size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-[32px] text-darkColor font-bold'>Диагностика</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Диагностика</p>
                                 <p className='text-base text-lightColor font-normal leading-6'>Мастера быстро найдут причину поломку котла</p>
                             </div>
                         </div>
@@ -49,18 +50,25 @@ const Superiority = () => {
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><HiOutlineHandThumbUp size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-[32px] text-darkColor font-bold'>Ремонт</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Ремонт</p>
                                 <p className='text-base text-lightColor font-normal leading-6'>Качественный ремонт по доступным ценам</p>
                             </div>
                         </div>
 
                     </div>
-                    <div>
-                        <img src={service_img} alt='servise_img' />
+
+                    <div className='md:hidden my-12'>
+                        <button className=' bg-mainColor py-3 px-5 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-base'>Вызвать мастера</span></button>
                     </div>
+                    
+                    <div>
+                        <img src={service_img} alt='servise_img' className='mx-auto' />
+                    </div>
+
                 </div>
-                <div>
-                    <button className='bg-mainColor py-3 px-5 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-base'>Вызвать мастера</span></button>
+
+                <div className='hidden md:block'>
+                    <button className=' bg-mainColor py-3 px-5 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-base'>Вызвать мастера</span></button>
                 </div>
             </div>
         </section>

@@ -12,22 +12,23 @@ import 'swiper/css/pagination';
 const Comments = () => {
     const swiperRef: any = useRef();
     return (
-        <section className='my-24 box-border'>
+        <section className='my-16 md:my-24 box-border'>
             <div className="container">
-                <div className='grid grid-cols-2 items-center gap-16'>
-                    <div className='relative'>
+                <div className='md:grid  grid-cols-2 items-center  md:gap-16'>
+                    <div className='relative '>
                         <Swiper
-                            modules={[]}
+                            modules={[Pagination]}
                             spaceBetween={50}
                             slidesPerView={1}
                             pagination={{ clickable: true }}
                             onSwiper={(swiper: any) => {
                                 swiperRef.current = swiper;
                             }}
+                            
                             loop={true}
                         >
                             <SwiperSlide>
-                                <div className='space-y-12'>
+                                <div className='space-y-4 md:space-y-12'>
                                     <div className='flex items-center text-[#FEC84B]'>
                                         <MdOutlineStarPurple500 size={20} />
                                         <MdOutlineStarPurple500 size={20} />
@@ -35,66 +36,66 @@ const Comments = () => {
                                         <MdOutlineStarPurple500 size={20} />
                                         <MdOutlineStarPurple500 size={20} />
                                     </div>
-                                    <p className='text-xl text-darkColor font-jura font-normal leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
-                                    <div className='flex items-center gap-4'>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <div className='flex items-center gap-4 pb-5'>
+                                        <img src={avatar} alt="" />
+                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='space-y-4 md:space-y-12'>
+                                    <div className='flex items-center text-[#FEC84B]'>
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                    </div>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <div className='flex items-center gap-4 pb-5'>
+                                        <img src={avatar} alt="" />
+                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='space-y-4 md:space-y-12'>
+                                    <div className='flex items-center text-[#FEC84B]'>
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                    </div>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <div className='flex items-center gap-4 pb-5'>
+                                        <img src={avatar} alt="" />
+                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='space-y-4 md:space-y-12'>
+                                    <div className='flex items-center text-[#FEC84B]'>
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                        <MdOutlineStarPurple500 size={20} />
+                                    </div>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <div className='flex items-center gap-4 pb-5'>
                                         <img src={avatar} alt="" />
                                         <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
                                     </div>
                                 </div>
                             </SwiperSlide>
 
-                            <SwiperSlide>
-                                <div className='space-y-12'>
-                                    <div className='flex items-center text-[#FEC84B]'>
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                    </div>
-                                    <p className='text-xl text-darkColor font-jura font-normal leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
-                                    <div className='flex items-center gap-4'>
-                                        <img src={avatar} alt="" />
-                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <div className='space-y-12'>
-                                    <div className='flex items-center text-[#FEC84B]'>
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                    </div>
-                                    <p className='text-xl text-darkColor font-jura font-normal leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
-                                    <div className='flex items-center gap-4'>
-                                        <img src={avatar} alt="" />
-                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <div className='space-y-12'>
-                                    <div className='flex items-center text-[#FEC84B]'>
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                        <MdOutlineStarPurple500 size={20} />
-                                    </div>
-                                    <p className='text-xl text-darkColor font-jura font-normal leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
-                                    <div className='flex items-center gap-4'>
-                                        <img src={avatar} alt="" />
-                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
+                          
+                           
                         </Swiper>
-                        <div className='absolute bottom-0 right-0 z-50 flex items-center gap-8'>
+                        <div className='absolute hidden lg:bottom-0 right-0 z-50 md:flex items-center gap-8'>
                             <div onClick={() => swiperRef.current.slidePrev()} className='border bg-white  border-[#EAECF0] rounded-full text-[#667085] p-4 cursor-pointer hover:bg-[#eee] transition-all duration-500'>
                                 <FaArrowLeft size={24} />
                             </div>
@@ -103,7 +104,7 @@ const Comments = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='grid grid-cols-6 h-[496px] gap-4'>
+                    <div className='grid grid-cols-6 mt-10 md:mt-0 lg:h-[496px] gap-1 md:gap-4'>
                         <div className=' col-start-2 col-end-4 row-start-2 row-end-3'>
                             <img src={person_one_img} alt="person_one_img"  className='w-full h-full'/>
                         </div>

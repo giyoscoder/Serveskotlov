@@ -4,7 +4,7 @@
 
 @layer base {
     input {
-        @apply max-w-[360px] w-full py-3 px-[14px] border border-[#D0D5DD] rounded-lg placeholder:text-base placeholder:font-normal bg-white outline-none
+        @apply md:max-w-[360px] w-full py-3 px-[14px] border border-[#D0D5DD] rounded-lg placeholder:text-base placeholder:font-normal bg-white outline-none
     }
 }
 
@@ -30,6 +30,22 @@
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 16px;
 }
 
+@media only screen and (min-width: 768px) {
+    .container{
+        padding: 0 32px;
+    }
+}
+
+/* Swiper style */
+.swiper-pagination-bullet {
+    background-color: #101828 !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .swiper-pagination-bullet {
+        display: none !important;
+    }
+}

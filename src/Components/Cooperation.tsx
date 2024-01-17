@@ -3,10 +3,10 @@ import { ariston_img, ferroli_img, baxi_img, unit_img, viesmann_img } from '../A
 
 const Cooperation = () => {
     return (
-        <section className='bg-[#F9FAFB] py-[42px] mt-24'>
+        <section className='bg-[#F9FAFB] py-16 md:py-[42px] mt-16 md:mt-24'>
             <div className="container">
-                <p className='text-center text-lightColor text-base font-jura font-normal leading-6 '>Работаем со всеми маркамии моделями котлов</p>
-                <div className='flex items-center justify-between mt-8'>
+                <p className='text-center text-lightColor text-lg md:text-base font-jura font-normal leading-6 '>Работаем со всеми маркамии моделями котлов</p>
+                <div className='flex flex-wrap gap-8  lg:flex-nowrap items-center justify-evenly lg:justify-between mt-8'>
                     <img src={ariston_img} alt='ariston_img' />
                     <img src={ferroli_img} alt='ferroli_img' />
                     <img src={baxi_img} alt='baxi_img' />
