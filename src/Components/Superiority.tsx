@@ -67,7 +67,7 @@ const Superiority = () => {
 
                 </div>
 
-                <div className='hidden md:block'>
+                <div className='hidden md:block fixed bottom-5 left-1/2 -translate-x-[50%]'>
                     <button className=' bg-mainColor py-3 px-5 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-base'>Вызвать мастера</span></button>
                 </div>
             </div>
