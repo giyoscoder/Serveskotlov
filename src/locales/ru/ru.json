@@ -1,11 +1,11 @@
 {
     "navbar": {
         "lan": "Ru",
-        "reviews": "Отзывы",
+        "reviews": "Наши услуги",
         "contact": "Контакты",
-        "companies": "O компании",
+        "companies": "О Нас",
         "baymak": "Baymak",
-        "help": "Помощь"
+        "help": "Отзывы"
     },
     "showcase": {
         "title": "Профессиональный ремонт котлов в Ташкенте",
@@ -24,7 +24,7 @@
         "diagnostics": "Диагностика",
         "diagnostics_text": "Мастера быстро найдут причину поломку котла ",
         "repair": "Ремонт",
-        "repair_text": "Ремонт",
+        "repair_text": "Качественный ремонт по доступным ценам",
         "button": "Вызвать мастера"
     },
     "cooperation": {
@@ -100,10 +100,10 @@
     },
     "footer": {
          "lan": "Ru",
-        "reviews": "Отзывы",
-        "contact": "Контакты",
-        "companies": "O компании",
-        "baymak": "Baymak",
-        "help": "Помощь"
+         "reviews": "Наши услуги",
+         "contact": "Контакты",
+         "companies": "О Нас",
+         "baymak": "Baymak",
+         "help": "Отзывы"
     }
 }

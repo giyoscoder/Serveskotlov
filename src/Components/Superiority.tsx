@@ -3,9 +3,11 @@ import { CiStar, CiDeliveryTruck, CiSearch } from "react-icons/ci";
 import { HiOutlineHandThumbUp } from "react-icons/hi2";
 import { FaPhoneAlt } from "react-icons/fa";
 import { service_img } from '../Assets/Images'
+import { useTranslation } from 'react-i18next';
 
 const Superiority = () => {
-    const [isButtonVisible,setIsButtonVisible] =useState(false);
+    const [isButtonVisible, setIsButtonVisible] = useState(false);
+    const { t } = useTranslation('superiority');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,9 +16,9 @@ const Superiority = () => {
             const scrollPosition = window.scrollY;
 
             if (scrollPosition + windowHeight + 300 >= documentHeight) {
-              setIsButtonVisible(true);
+                setIsButtonVisible(true);
             } else {
-              setIsButtonVisible(false);
+                setIsButtonVisible(false);
             }
         };
 
@@ -26,14 +28,14 @@ const Superiority = () => {
         };
     }, [])
 
-    
+
 
     return (
         <section className='pt-16 md:pt-24'>
             <div className="container">
                 <div>
-                    <h1 className='font-russo text-darkColor text-[28px] md:text-5xl font-normal leading-[38px] md:leading-[44px] -tracking-[0.96px]'>Почему выбирают нас</h1>
-                    <p className='font-jura text-lightColor text-lg md:text-xl font-normal leading-7 md:leading-[30px] max-w-[511px] mt-4 md:mt-5'>Наш сервисный центр ориентирован на удовлетворение потребностей наших клиентов</p>
+                    <h1 className='font-russo text-darkColor text-[28px] md:text-5xl font-normal leading-[38px] md:leading-[44px] -tracking-[0.96px]'>{t('title')}</h1>
+                    <p className='font-jura text-lightColor text-lg md:text-xl font-normal leading-7 md:leading-[30px] max-w-[511px] mt-4 md:mt-5'>{t('about')}</p>
                 </div>
 
                 <div className='py-16 flex flex-col  md:flex-row md:items-center justify-between'>
@@ -43,8 +45,8 @@ const Superiority = () => {
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiStar size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Качество</p>
-                                <p className='text-base text-lightColor font-normal leading-6'>Наш сервисный центр обслужит ваш звонок в любое время</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>{t('quality')}</p>
+                                <p className='text-base text-lightColor font-normal leading-6'>{t('quality_text')}</p>
                             </div>
                         </div>
 
@@ -53,8 +55,8 @@ const Superiority = () => {
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiDeliveryTruck size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Быстрый выезд</p>
-                                <p className='text-base text-lightColor font-normal leading-6'>Выезд мастеров в день звонка</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>{t('checkout')}</p>
+                                <p className='text-base text-lightColor font-normal leading-6'>{t('checkout_text')}</p>
                             </div>
                         </div>
 
@@ -63,8 +65,8 @@ const Superiority = () => {
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiSearch size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Диагностика</p>
-                                <p className='text-base text-lightColor font-normal leading-6'>Мастера быстро найдут причину поломку котла</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>{t('diagnostics')}</p>
+                                <p className='text-base text-lightColor font-normal leading-6'>{t('diagnostics_text')}</p>
                             </div>
                         </div>
 
@@ -73,8 +75,8 @@ const Superiority = () => {
                                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><HiOutlineHandThumbUp size={'24'} /></span>
                             </div>
                             <div className='font-jura'>
-                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>Ремонт</p>
-                                <p className='text-base text-lightColor font-normal leading-6'>Качественный ремонт по доступным ценам</p>
+                                <p className='text-lg md:text-[32px] text-darkColor font-bold'>{t('repair')}</p>
+                                <p className='text-base text-lightColor font-normal leading-6'>{t('repair_text')}</p>
                             </div>
                         </div>
 
@@ -90,8 +92,8 @@ const Superiority = () => {
 
                 </div>
 
-               {!isButtonVisible && <a href='tel:+998 95-157-50-50' className='block fixed bottom-5 z-[60] left-1/2 -translate-x-[50%]'>
-                    <button className='bg-mainColor w-full py-4 px-6 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-xs sm:text-base'>Вызвать мастера</span></button>
+                {!isButtonVisible && <a href='tel:+998 95-157-50-50' className='block fixed bottom-5 z-[60] left-1/2 -translate-x-[50%]'>
+                    <button className='bg-mainColor w-full py-4 px-6 rounded-lg text-white flex items-center gap-2 mx-auto'><FaPhoneAlt /> <span className='font-medium text-xs sm:text-base'>{t('button')}</span></button>
                 </a>}
             </div>
         </section>

@@ -7,9 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-
+import {useTranslation} from 'react-i18next'
 const Comments = () => {
+    const {t} = useTranslation('slide_one')
     const swiperRef: any = useRef();
     return (
         <section className='my-16 md:my-24 box-border'>
@@ -27,6 +27,7 @@ const Comments = () => {
                             
                             loop={true}
                         >
+                     
                             <SwiperSlide>
                                 <div className='space-y-4 md:space-y-12'>
                                     <div className='flex items-center text-[#FEC84B]'>
@@ -36,10 +37,10 @@ const Comments = () => {
                                         <MdOutlineStarPurple500 size={20} />
                                         <MdOutlineStarPurple500 size={20} />
                                     </div>
-                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>{t('comment')}</p>
                                     <div className='flex items-center gap-4 pb-5'>
                                         <img src={avatar} alt="" />
-                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
+                                        <span className='text-xl text-darkColor font-bold font-jura'>{t('user')}</span>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -52,10 +53,10 @@ const Comments = () => {
                                         <MdOutlineStarPurple500 size={20} />
                                         <MdOutlineStarPurple500 size={20} />
                                     </div>
-                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>{t('comment')}</p>
                                     <div className='flex items-center gap-4 pb-5'>
                                         <img src={avatar} alt="" />
-                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
+                                        <span className='text-xl text-darkColor font-bold font-jura'>{t('user')}</span>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -68,10 +69,10 @@ const Comments = () => {
                                         <MdOutlineStarPurple500 size={20} />
                                         <MdOutlineStarPurple500 size={20} />
                                     </div>
-                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>{t('comment')}</p>
                                     <div className='flex items-center gap-4 pb-5'>
                                         <img src={avatar} alt="" />
-                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
+                                        <span className='text-xl text-darkColor font-bold font-jura'>{t('user')}</span>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -84,13 +85,14 @@ const Comments = () => {
                                         <MdOutlineStarPurple500 size={20} />
                                         <MdOutlineStarPurple500 size={20} />
                                     </div>
-                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>Я хотелa бы поделиться своим восторженным отзывом о компании, которая провела ремонт моего котла и предоставила услуги сантехники. Эта компания просто потрясающая!</p>
+                                    <p className='text-2xl md:text-xl  text-darkColor font-jura font-normal leading-8 md:leading-6 -tracking-[0.4px]'>{t('comment')}</p>
                                     <div className='flex items-center gap-4 pb-5'>
                                         <img src={avatar} alt="" />
-                                        <span className='text-xl text-darkColor font-bold font-jura'>Гузал Шукурова</span>
+                                        <span className='text-xl text-darkColor font-bold font-jura'>{t('user')}</span>
                                     </div>
                                 </div>
                             </SwiperSlide>
+                            
 
                           
                            
