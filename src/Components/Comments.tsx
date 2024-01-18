@@ -12,7 +12,7 @@ const Comments = () => {
     const {t} = useTranslation('slide_one')
     const swiperRef: any = useRef();
     return (
-        <section className='my-16 md:my-24 box-border'>
+        <section id='comments' className='my-16 md:my-24 box-border'>
             <div className="container">
                 <div className='md:grid  grid-cols-2 items-center  md:gap-16'>
                     <div className='relative '>

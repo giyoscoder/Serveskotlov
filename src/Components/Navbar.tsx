@@ -39,7 +39,7 @@ const Navbar = () => {
                             <li><Link to='services' spy={true} smooth={true} offset={-150}>{t('reviews')}</Link></li>
                             <li><Link to='about' spy={true} smooth={true} offset={-100}>{t('companies')}</Link></li>
                             <li><Link to='#' spy={true} smooth={true} offset={-150}>{t('baymak')}</Link></li>
-                            <li><Link to='#' spy={true} smooth={true} offset={-150}>{t('help')}</Link></li>
+                            <li><Link to='comments' spy={true} smooth={true} offset={-150}>{t('help')}</Link></li>
                             <li><Link to='contact' spy={true} smooth={true} offset={-100}>{t('contact')}</Link></li>
                         </ul>
                     </div>
