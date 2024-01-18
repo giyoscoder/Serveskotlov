@@ -36,7 +36,7 @@ const Contact = () => {
             
             <div className='md:space-y-5  gap-4 flex  items-start md:flex-col'>
               <div className='bg-[#F0F0FF] p-[6px] rounded-full inline-block'>
-                <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><FaPhoneAlt size={'24'} /></span>
+                <a href='tel:+998 95-157-50-50' target='_blank' className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><FaPhoneAlt size={'24'} /></a>
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>Телефон</p>
@@ -46,7 +46,7 @@ const Contact = () => {
 
             <div className='md:space-y-5  gap-4 flex items-start md:flex-col'>
               <div className='bg-[#F0F0FF] p-[6px] rounded-full inline-block'>
-                <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><FaTelegram size={'24'} /></span>
+                <a href='https://t.me/servis_kotlov_tashkent' target='_blank' className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><FaTelegram size={'24'} /></a>
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>Телеграм</p>
@@ -56,7 +56,7 @@ const Contact = () => {
 
             <div className='md:space-y-5  gap-4 flex items-start md:flex-col'>
               <div className='bg-[#F0F0FF] p-[6px] rounded-full inline-block'>
-                <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><FaInstagram size={'24'} /></span>
+                <a href="https://www.instagram.com/serveskotlov.uz/" target='_blank' className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><FaInstagram size={'24'} /></a>
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>Инстаграм</p>

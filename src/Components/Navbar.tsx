@@ -68,7 +68,7 @@ const Navbar = () => {
 
                 {/* mobile  */}
                 <div className='md:hidden '>
-                    <div className={`pt-10 h-screen w-2/3 bg-white absolute top-0 z-[80]  ${navbar ? 'left-0' : '-left-full'}  transition-all duration-300  space-y-5`}>
+                    <div className={`pt-10 h-screen w-2/3 bg-white absolute top-0 z-[80]  ${navbar ? 'left-0' : '-left-full'}  transition-all duration-300 space-y-5`}>
                         <Link to={'#'} className='text-mainColor text-center block  font-sans font-bold text-base max-w-[147px] mx-auto'>
                             <img src={logo} alt="" />
                         </Link>
@@ -79,7 +79,10 @@ const Navbar = () => {
                             <li><Link onClick={() => navbarHadler()} to='#' spy={true} smooth={true} offset={-150}>Отзывы</Link></li>
                             <li><Link onClick={() => navbarHadler()} to='contact' spy={true} smooth={true} offset={-100}>Контакты </Link></li>
                         </ul>
-                        <button className='bg-mainColor py-3 px-5 rounded-lg mx-auto  text-white flex items-center gap-2'><FaPhoneAlt /> <span className='font-medium text-base'>+998951575050</span></button>
+
+                       <a href="tel:+998 95-157-50-50" className=' block'>
+                       <button className='bg-mainColor py-3 px-5 rounded-lg mx-auto  text-white flex items-center gap-2'><FaPhoneAlt /> <span className='font-medium text-base'>+998951575050</span></button>
+                       </a>
 
                             {/* language */}
                         {/* <div className='relative'>
