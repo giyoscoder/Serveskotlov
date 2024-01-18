@@ -5,29 +5,25 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { service_img } from '../Assets/Images'
 
 const Superiority = () => {
-    const [isButtonVisible,setIsButtonVisible] =useState(false)
-    useEffect(() => {
+    const [isButtonVisible,setIsButtonVisible] =useState(false);
 
+    useEffect(() => {
         const handleScroll = () => {
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
             const scrollPosition = window.scrollY;
 
-            // Check if the user has scrolled to the bottom of the page
             if (scrollPosition + windowHeight + 300 >= documentHeight) {
               setIsButtonVisible(true);
             } else {
               setIsButtonVisible(false);
             }
-            window.addEventListener('scroll', handleScroll);
-            console.log(windowHeight, documentHeight, scrollPosition);
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-
     }, [])
 
     
