@@ -1,3 +1,4 @@
+export{default as logo} from './logo.jpg'
 export { default as showcase_img } from './showcase_img.png';
 export { default as service_img } from './service_img.png';
 

@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import { FaPhoneAlt, FaBars, FaTelegram, FaInstagram } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import {logo} from '../Assets/Images'
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
@@ -27,7 +28,9 @@ const Navbar = () => {
                     <div className='flex items-center gap-6 lg:gap-10'>
                         <Link activeClass="active"
                             to='showcase' spy={true} smooth={true} offset={-150}
-                            className='text-mainColor cursor-pointer font-sans  font-bold text-base'>Serveskotlov.uz</Link>
+                            className='text-mainColor cursor-pointer font-sans  font-bold text-base max-w-[147px]'>
+                                <img src={logo} alt="" />
+                            </Link>
                         <ul className='hidden md:flex items-center  cursor-pointer gap-5 lg:gap-[32px] text-base font-medium font-jura'>
                             <li><Link to='services' spy={true} smooth={true} offset={-150}>Наши услуги</Link></li>
                             <li><Link to='about' spy={true} smooth={true} offset={-100}>О Нас</Link></li>
@@ -65,8 +68,10 @@ const Navbar = () => {
 
                 {/* mobile  */}
                 <div className='md:hidden '>
-                    <div className={`pt-10 h-screen w-2/3 bg-white absolute top-0 z-[80]  ${navbar ? 'left-0' : '-left-full'}  transition-all duration-300   space-y-8`}>
-                        <Link to={'#'} className='text-mainColor text-center block  font-sans font-bold text-base'>Serveskotlov.uz</Link>
+                    <div className={`pt-10 h-screen w-2/3 bg-white absolute top-0 z-[80]  ${navbar ? 'left-0' : '-left-full'}  transition-all duration-300  space-y-5`}>
+                        <Link to={'#'} className='text-mainColor text-center block  font-sans font-bold text-base max-w-[147px] mx-auto'>
+                            <img src={logo} alt="" />
+                        </Link>
                         <ul className='flex flex-col items-center gap-5 text-base font-medium font-jura'>
                             <li ><Link onClick={() => navbarHadler()} to='services' spy={true} smooth={true} offset={-150}>Наши услуги</Link></li>
                             <li ><Link onClick={() => navbarHadler()} to='about' spy={true} smooth={true} offset={-100}>О Нас</Link></li>
