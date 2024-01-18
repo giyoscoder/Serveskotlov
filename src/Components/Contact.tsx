@@ -15,15 +15,18 @@ const Contact = () => {
             </div>
           </form>
           <p className='text-base text-lightColor font-jura font-normal leading-5 mt-4 mx-auto max-w-[535px]'>Оставляя заявку, вы соглашаетесь на обработку персональных данных и с условиями бронирования счёта</p>
-          <div className='mt-8 flex flex-wrap justify-evenly gap-5 text-start item-start md:justify-between'>
 
-            <div className='md:space-y-5  gap-4 flex items-start md:flex-col'>
+          {/* Social media */}
+          <div className='mt-8 flex flex-wrap justify-start sm:justify-evenly gap-5 text-start item-start md:justify-between'>
+
+            
+            <div className='md:space-y-5  gap-4 flex  items-start md:flex-col'>
               <div className='bg-[#F0F0FF] p-[6px] rounded-full inline-block'>
                 <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><FaPhoneAlt size={'24'} /></span>
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>Телефон</p>
-                <p className='text-base text-mainColor font-semibold leading-6'>+1 (555) 000-0000</p>
+                <p className='text-base text-mainColor font-semibold leading-6'>+998 95-157-50-50</p>
               </div>
             </div>
 
@@ -33,7 +36,7 @@ const Contact = () => {
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>Телеграм</p>
-                <p className='text-base text-mainColor font-semibold leading-6'>+1 (555) 000-0000</p>
+                <p className='text-base text-mainColor font-semibold leading-6'>@servis_kotlov_tashkent</p>
               </div>
             </div>
 
@@ -43,7 +46,7 @@ const Contact = () => {
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>Инстаграм</p>
-                <p className='text-base text-mainColor font-semibold leading-6'>+1 (555) 000-0000</p>
+                <p className='text-base text-mainColor font-semibold leading-6'>@serveskotlov.uz</p>
               </div>
             </div>
 
@@ -53,12 +56,14 @@ const Contact = () => {
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>Локация</p>
-                <p className='text-base text-mainColor font-semibold leading-6'>+1 (555) 000-0000</p>
+                <p className='text-base text-mainColor font-semibold leading-6 sm:max-w-[228px]'>Talimarjon street, 15, Tashkent, Yashnobod, Tashkent, Uzbekistan </p>
               </div>
             </div>
 
 
           </div>
+
+
         </div>
       </div>
     </section>

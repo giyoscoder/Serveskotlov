@@ -20,7 +20,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='fixed top-0 left-0 w-full bg-white z-50'>
+        <nav className='fixed top-0 left-0 w-full bg-white z-[100]'>
             <div className="container">
                 {/* desktop */}
                 <div className='flex items-center justify-between py-4'>
@@ -38,8 +38,12 @@ const Navbar = () => {
                     </div>
                     <div className='flex items-center gap-4'>
                         <div className='flex items-center gap-4 text-mainColor'>
+                        <a href="https://t.me/servis_kotlov_tashkent" target='_black'>
                             <FaTelegram size={24} />
-                            <FaInstagram size={24} />
+                        </a>
+                        <a href="https://www.instagram.com/serveskotlov.uz/" target='_black'>
+                        <FaInstagram size={24} />
+                        </a>
                             {/* <BsTelephone size={24} className='md:block lg:hidden' /> */}
                         </div>
                         <div className='relative'>
@@ -61,7 +65,7 @@ const Navbar = () => {
 
                 {/* mobile  */}
                 <div className='md:hidden '>
-                    <div className={`pt-10 h-screen w-2/3 bg-white absolute top-0 z-50  ${navbar ? 'left-0' : '-left-full'}  transition-all duration-300   space-y-8`}>
+                    <div className={`pt-10 h-screen w-2/3 bg-white absolute top-0 z-[80]  ${navbar ? 'left-0' : '-left-full'}  transition-all duration-300   space-y-8`}>
                         <Link to={'#'} className='text-mainColor text-center block  font-sans font-bold text-base'>Serveskotlov.uz</Link>
                         <ul className='flex flex-col items-center gap-5 text-base font-medium font-jura'>
                             <li ><Link onClick={() => navbarHadler()} to='services' spy={true} smooth={true} offset={-150}>Наши услуги</Link></li>

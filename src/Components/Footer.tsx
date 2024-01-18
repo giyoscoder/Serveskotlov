@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll';
 import { FaTelegram, FaWhatsapp, FaInstagram } from "react-icons/fa";
+
 const Footer = () => {
     return (
         <footer className='mt-16 md:mt-24 pt-12 pb-8 bg-mainColor'>
@@ -16,9 +17,14 @@ const Footer = () => {
                 <div className='flex flex-col-reverse sm:flex-row items-start gap-6 sm:items-center justify-between border-t border-[#B9B9B9] mt-12 pt-8'>
                     <p className='text-base  text-[#D0D5DD] font-normal font-jura leading-6'>© 2024 Serveskotlov.uz. All rights reserved.</p>
                     <div className='flex items-center gap-8  text-white'>
-                        <FaTelegram size={24} />
-                        <FaWhatsapp size={24} />
+                        <a href="https://t.me/servis_kotlov_tashkent" target='_black'>
+                            <FaTelegram size={24} />
+                        </a>
+                        <a href="tel:+998 95-157-50-50"><FaWhatsapp size={24} /></a>
+                        <a href="https://www.instagram.com/serveskotlov.uz/" target='_black'>
                         <FaInstagram size={24} />
+                        </a>
+                            
                     </div>
                 </div>
             </div>
