@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const Navbar = React.lazy(() => import('./Components/Navbar'));
 const MainPage = React.lazy(() => import('./Pages/Main'));
@@ -15,6 +17,7 @@ const App = () => {
         </Routes>
       </Suspense>
       <Footer />
+      <ToastContainer />
     </div>
   )
 }
