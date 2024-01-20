@@ -8,6 +8,16 @@
     }
 }
 
+
+body {
+    ::selection {
+        display: none;
+    }
+}
+
+
+
+
 @font-face {
     font-family: 'Jura';
     src: url('./Assets/Fonts/Jura-VariableFont_wght.ttf');
@@ -50,7 +60,7 @@
     }
 }
 
-.cooperation_slider > div {
+.cooperation_slider>div {
     display: flex;
     align-items: center;
     justify-content: space-between;

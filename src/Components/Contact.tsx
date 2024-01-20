@@ -7,7 +7,7 @@ import { instance } from '../instance/instance';
 import { toast } from 'react-toastify';
 import { watch } from 'fs';
 type Inputs = {
-  phone: string | number
+  phone: string | any
   data: undefined | any
   setData: undefined | any
 }
@@ -19,7 +19,7 @@ const Contact = () => {
 
 
   const submitHandler = (e: Inputs) => {
-    if (e.phone != '') {
+    if (e.phone != '' && e.phone.length >= 12) {
       instance.post('/call', e).then(data => setData(data.data))
       reset()
       toast.success(' Success!', {
@@ -66,7 +66,7 @@ const Contact = () => {
             <div className='flex flex-col md:flex-row items-start justify-center gap-4 mt-8'>
               <div className='md:max-w-[360px] w-full'> <input type='text' className={`${error && 'border border-red-500 bg-red-50'}`} placeholder={t('input_placeholder')} {...register('phone', {
               })} />
-                {error && <p className='text-red-500 text-start text-sm'>To'ldiring!</p>}
+                {error && <p className='text-red-500 text-start text-sm'>Raqamingizni to'g'ri kiriting !</p>}
               </div>
               <button type='submit' className='bg-mainColor w-full md:max-w-[173px] font-jura text-white text-base font-medium py-3 px-5 rounded-lg'>{t('button_text')}</button>
             </div>
@@ -109,7 +109,7 @@ const Contact = () => {
 
             <div className='md:space-y-5  gap-4 flex items-start md:flex-col'>
               <div className='bg-[#F0F0FF] p-[6px] rounded-full inline-block'>
-                <span className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiLocationOn size={'24'} /></span>
+                <a href='https://maps.windows.com/?form=WNAMSH&collection=point.41.273316_69.295482_Point'  target='_blank' className='bg-[#E8E7FF] p-[6px] rounded-full text-mainColor block'><CiLocationOn size={'24'} /></a>
               </div>
               <div className='font-jura'>
                 <p className='text-lg md:text-xl text-darkColor font-bold'>{t('location')}</p>

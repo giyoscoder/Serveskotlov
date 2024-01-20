@@ -50,7 +50,7 @@ const Cooperation = () => {
                     modules={[Autoplay]}
                     className="mySwiper cooperation_slider"
                 >
-                    {cooperateImg.map(a => <SwiperSlide><img src={a} alt="" /></SwiperSlide>)}
+                    {cooperateImg.map(a => <SwiperSlide key={a}><img src={a} alt="" /></SwiperSlide>)}
                 </Swiper>
             </div>
         </section>

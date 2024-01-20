@@ -16,10 +16,10 @@ type Inputs = {
 const Showcase = () => {
     const [error, setError] = useState<any>(false)
 
-    const { register, handleSubmit, reset,  watch ,formState: { errors, isSubmitSuccessful } } = useForm<Inputs>();
+    const { register, handleSubmit, reset, watch, formState: { errors, isSubmitSuccessful } } = useForm<Inputs>();
 
     const onSubmitHandler = (e: Inputs) => {
-        if (e.name != '' && e.phone != '') {
+        if (e.name != '' && e.phone != '' && e.phone.length >= 12) {
             instance.post('/call', e).then()
             reset()
             toast.success(' Success!', {
@@ -34,23 +34,11 @@ const Showcase = () => {
                 transition: undefined,
             });
         } else {
-            // toast.error('Wrong!', {
-            //   position: "top-right",
-            //   autoClose: 5000,
-            //   hideProgressBar: false,
-            //   closeOnClick: true,
-            //   pauseOnHover: true,
-            //   draggable: true,
-            //   progress: undefined,
-            //   theme: "light",
-            //   transition: undefined,
-            // });
             setError(true)
         }
-
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         setError(false)
     }, [watch('name')])
 
@@ -71,7 +59,7 @@ const Showcase = () => {
                         </div>
                         <div className='md:max-w-[360px] w-full'>
                             <input type='text' placeholder={t('input_phone')} className={`font-jura ${error && 'border border-red-500 bg-red-50'}`} {...register('phone')} />
-                            {error && <p className='text-red-500'>Raqamni to'ldirish majburiy!</p>}
+                            {error && <p className='text-red-500'>Raqamingizni to'g'ri kiriting!</p>}
                         </div>
 
                         <button type='submit' className='bg-mainColor w-full md:max-w-[173px] font-jura text-white text-base font-medium py-3 px-5 rounded-lg'>{t('button_submit')}</button>
