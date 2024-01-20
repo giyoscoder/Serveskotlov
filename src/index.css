@@ -34,7 +34,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .container{
+    .container {
         padding: 0 32px;
     }
 }
@@ -48,4 +48,11 @@
     .swiper-pagination-bullet {
         display: none !important;
     }
+}
+
+.cooperation_slider > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
 }

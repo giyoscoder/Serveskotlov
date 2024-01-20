@@ -11,7 +11,7 @@ const Footer = () => {
                 <ul className='flex flex-wrap items-center justify-evenly md:justify-center gap-3 md:gap-8 text-base text-white font-bold font-jura mt-8 cursor-pointer'>
                     <li><Link to='services' spy={true} smooth={true} offset={-150}>{t('reviews')}</Link></li>
                     <li><Link to='about' spy={true} smooth={true} offset={-100}>{t('companies')}</Link></li>
-                    <li><Link to='#' spy={true} smooth={true} offset={-150}>{t('baymak')}</Link></li>
+                    {/* <li><Link to='#' spy={true} smooth={true} offset={-150}>{t('baymak')}</Link></li> */}
                     <li><Link to='#' spy={true} smooth={true} offset={-150}>{t('help')}</Link></li>
                     <li><Link to='contact' spy={true} smooth={true} offset={-100}>{t('contact')} </Link></li>
                 </ul>

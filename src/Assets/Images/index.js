@@ -1,4 +1,6 @@
 export{default as logo} from './logo.jpg'
+export{default as favicon} from './favicon.png'
+
 export { default as showcase_img } from './showcase_img.png';
 export { default as service_img } from './service_img.png';
 
@@ -32,3 +34,20 @@ export {default as person_two_img} from './person_two_img.png'
 export {default as person_three_img} from './person_three_img.png'
 export {default as person_four_img} from './person_four_img.png'
 export {default as person_five_img} from './person_five_img.png'
+
+// first slider imgs
+export {default as first_slider_one} from './one_slider.jpg'
+export {default as first_slider_two} from './second_slider.jpg'
+export {default as first_slider_three} from './three_slider.jpg'
+
+// second slider imgs
+
+
+// third slider imgs
+export {default as third_slider_one } from './напольных_one_img.jpg';
+export {default as third_slider_two } from './напольных_second_img.jpg';
+
+// fourth slider imgs
+export {default as fourth_slider_one} from './профилактика_one_img.jpg'
+
+//five slider imgs 

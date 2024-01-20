@@ -1,44 +1,58 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneAlt, FaTelegram, FaInstagram } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
-import { useForm } from 'react-hook-form';
+import { set, useForm } from 'react-hook-form';
 import { instance } from '../instance/instance';
 import { toast } from 'react-toastify';
+import { watch } from 'fs';
 type Inputs = {
   phone: string | number
+  data: undefined | any
+  setData: undefined | any
 }
 
 const Contact = () => {
-  const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful,isLoading } } = useForm<Inputs>()
+  const { register, handleSubmit, reset, watch, formState: { errors, isSubmitSuccessful, isLoading, isSubmitted, isValid } } = useForm<Inputs>()
+  const [data, setData] = useState<any>();
+  const [error, setErrors] = useState(false);
+
 
   const submitHandler = (e: Inputs) => {
     if (e.phone != '') {
-      instance.post('/call', e).then(data => {
-        if (isSubmitSuccessful) {
-          reset()
-          console.log(data);
-
-          if (data?.data?.success) {
-            toast.success(' Success!', {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-              transition: undefined,
-            });
-          }
-        }
-
-      })
-
+      instance.post('/call', e).then(data => setData(data.data))
+      reset()
+      toast.success(' Success!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: undefined,
+      });
+    } else {
+      // toast.error('Wrong!', {
+      //   position: "top-right",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      //   transition: undefined,
+      // });
+      setErrors(true)
     }
-
   }
+
+  useEffect(() => {
+    setErrors(false)
+  }, [watch('phone')])
+
 
   const { t } = useTranslation('contact')
 
@@ -49,12 +63,15 @@ const Contact = () => {
           <p className='text-[28px] text-5xl text-darkColor font-russo font-normal leading-[44px] -tracking-[0.96px]'>{t('title')}</p>
           <p className='text-lg md:text-xl text-lightColor font-jura font-normal leading-[28px] md:leading-[30px] mt-5 max-w-[768px] mx-auto'>{t('about')}</p>
           <form onSubmit={handleSubmit(submitHandler)}>
-            <div className='flex flex-col md:flex-row items-center justify-center gap-4 mt-8'>
-              <input type='text' placeholder={t('input_placeholder')} {...register('phone')} />
+            <div className='flex flex-col md:flex-row items-start justify-center gap-4 mt-8'>
+              <div className='md:max-w-[360px] w-full'> <input type='text' className={`${error && 'border border-red-500 bg-red-50'}`} placeholder={t('input_placeholder')} {...register('phone', {
+              })} />
+                {error && <p className='text-red-500 text-start text-sm'>To'ldiring!</p>}
+              </div>
               <button type='submit' className='bg-mainColor w-full md:max-w-[173px] font-jura text-white text-base font-medium py-3 px-5 rounded-lg'>{t('button_text')}</button>
             </div>
           </form>
-          <p className='text-base text-lightColor font-jura font-normal leading-5 mt-4 mx-auto max-w-[535px]'>{t('description')}</p>
+          <p className='text-base text-lightColor font-jura font-normal leading-5  mt-4 mx-auto max-w-[535px]'>{t('description')}</p>
 
           {/* Social media */}
           <div className='mt-8 flex flex-wrap justify-start sm:justify-evenly gap-5 text-start item-start md:justify-between'>

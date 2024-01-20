@@ -38,7 +38,7 @@ const Navbar = () => {
                         <ul className='hidden md:flex items-center  cursor-pointer gap-5 lg:gap-[32px] text-base font-medium font-jura'>
                             <li><Link to='services' spy={true} smooth={true} offset={-150}>{t('reviews')}</Link></li>
                             <li><Link to='about' spy={true} smooth={true} offset={-100}>{t('companies')}</Link></li>
-                            <li><Link to='#' spy={true} smooth={true} offset={-150}>{t('baymak')}</Link></li>
+                            {/* <li><Link to='#' spy={true} smooth={true} offset={-150}>{t('baymak')}</Link></li> */}
                             <li><Link to='comments' spy={true} smooth={true} offset={-150}>{t('help')}</Link></li>
                             <li><Link to='contact' spy={true} smooth={true} offset={-100}>{t('contact')}</Link></li>
                         </ul>
@@ -51,7 +51,6 @@ const Navbar = () => {
                         <a href="https://www.instagram.com/serveskotlov.uz/" target='_black'>
                         <FaInstagram size={24} />
                         </a>
-                            {/* <BsTelephone size={24} className='md:block lg:hidden' /> */}
                         </div>
                         <div className='relative'>
                             <p onClick={() => setNavDrop(prev => !prev)} className='text-darkColor cursor-pointer text-base font-jura font-medium flex items-center gap-2 p-3 bg-[#F9FAFB] rounded-lg'><span className='capitalize'>{t('lan')}</span> <IoIosArrowDown className={`${navDrop && 'rotate-180 transition-all duration-300'}`} /></p>
@@ -63,7 +62,7 @@ const Navbar = () => {
                             </ul>
 
                         </div>
-                        <div className='hidden bg-mainColor py-3 px-5 rounded-lg text-white lg:flex items-center gap-2'><FaPhoneAlt /> <span className='font-medium text-base'>+998951575050</span></div>
+                        <a href='tel:+998951575050' className='hidden bg-mainColor py-3 px-5 rounded-lg text-white lg:flex items-center gap-2'><FaPhoneAlt /> <span className='font-medium text-base'>+998951575050</span></a>
                         <div onClick={navbarHadler} className='md:hidden text-darkColor cursor-pointer'>
                             <FaBars size='24' />
                         </div>
@@ -79,8 +78,8 @@ const Navbar = () => {
                         <ul className='flex flex-col items-center gap-5 text-base font-medium font-jura'>
                             <li ><Link onClick={() => navbarHadler()} to='services' spy={true} smooth={true} offset={-150}>{t('reviews')}</Link></li>
                             <li ><Link onClick={() => navbarHadler()} to='about' spy={true} smooth={true} offset={-100}>{t('companies')}</Link></li>
-                            <li><Link onClick={() => navbarHadler()} to='#' spy={true} smooth={true} offset={-150}>{t('baymak')}</Link></li>
-                            <li><Link onClick={() => navbarHadler()} to='#' spy={true} smooth={true} offset={-150}>{t('help')}</Link></li>
+                            {/* <li><Link onClick={() => navbarHadler()} to='#' spy={true} smooth={true} offset={-150}>{t('baymak')}</Link></li> */}
+                            <li><Link onClick={() => navbarHadler()} to='comments' spy={true} smooth={true} offset={-150}>{t('help')}</Link></li>
                             <li><Link onClick={() => navbarHadler()} to='contact' spy={true} smooth={true} offset={-100}>{t('contact')} </Link></li>
                         </ul>
 

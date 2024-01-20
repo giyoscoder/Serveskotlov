@@ -46,7 +46,7 @@
         "contour_wall": "Ремонт настенных котлов",
         "contour_floor": "Ремонт напольных котлов",
         "contour_prevention": "Профилактика котлов",
-        "contour_gas": "Профилактика котлов"
+        "contour_gas": "Обслуживание газовых котлов"
     },
     "contourService": {
         "title": "Надежный сервис",
