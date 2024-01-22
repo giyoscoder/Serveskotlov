@@ -12,6 +12,7 @@ const App = () => {
 
   useEffect(() => {
     const link:any = document.querySelector('link[rel="icon"]');
+    
     link.setAttribute('href', 'https://api.serveskotkov.uz/storage/01HMK7KFQ9EAVDJY2Y72PKW1QD.png');
   }, []);
   
