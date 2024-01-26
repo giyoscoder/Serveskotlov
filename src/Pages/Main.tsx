@@ -10,12 +10,12 @@ import Experience from '../Components/Experience';
 import Comments from '../Components/Comments';
 import Contact from '../Components/Contact';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const Main = () => {
     return (
         <section>
             {/* <Navbar /> */}
-
             <Showcase />
             <Superiority />
             <Cooperation />
@@ -24,7 +24,9 @@ const Main = () => {
             <ContourService />
             <Experience />
             <Comments />
-            {/* <Contact /> */}
+            <Outlet />
+            {/* <Contact />
+            <Footer /> */}
         </section>
     )
 }

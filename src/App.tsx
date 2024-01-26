@@ -31,7 +31,7 @@ const App = () => {
       <Navbar />
       <Suspense fallback={<p>Loading...</p>}>
         <Routes>
-          <Route path='/' index element={<MainPage />} />
+          <Route path='/' element={<MainPage />} />
           <Route path='/unit' element={<Unit />} />
           <Route path='/airfel' element={<Airfel />} />
           <Route path='/kiturami' element={<Kiturami />} />
@@ -41,6 +41,7 @@ const App = () => {
           <Route path='/viessmann' element={<Viessmann />} />
           <Route path='/ferroli' element={<Ferroli />} />
           <Route path='*' element={<Error />} />
+          <Route/>
         </Routes>
       </Suspense>
       <Contact />

@@ -30,7 +30,6 @@ const Navbar = () => {
     useEffect(() => {
         if (location.pathname != '/') { setLocationPath(false) }
         else {
-
             setLocationPath(true)
         }
     }, [location])
@@ -66,7 +65,7 @@ const Navbar = () => {
                                 <FaInstagram size={24} />
                             </a>
                         </div>
-                        <div className='relative'>
+                        {locationPath && <div className='relative'>
                             <p onClick={() => setNavDrop(prev => !prev)} className='text-darkColor cursor-pointer text-base font-jura font-medium flex items-center gap-2 p-3 bg-[#F9FAFB] rounded-lg'><span className='capitalize'>{t('lan')}</span> <IoIosArrowDown className={`${navDrop && 'rotate-180 transition-all duration-300'}`} /></p>
 
                             <ul className={`absolute -right-2 transition-all duration-300 ${navDrop ? 'opacity-1 top-full' : 'opacity-0 top-9'} cursor-pointer min-w-[150px] mt-1 text-base text-darkColor bg-white p-[10px] space-y-[20px] font-hura font-bold  rounded-lg`}>
@@ -75,7 +74,7 @@ const Navbar = () => {
                                 <li onClick={() => langugeHandler('ru')}>Русский язык</li>
                             </ul>
 
-                        </div>
+                        </div>}
                         <a href='tel:+998951575050' className='hidden bg-mainColor py-3 px-5 rounded-lg text-white lg:flex items-center gap-2'><FaPhoneAlt /> <span className='font-medium text-base'>+998951575050</span></a>
                         <div onClick={navbarHadler} className='md:hidden text-darkColor cursor-pointer'>
                             <FaBars size='24' />
