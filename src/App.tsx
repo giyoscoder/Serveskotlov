@@ -16,6 +16,7 @@ const Baymak = React.lazy(() => import('./Pages/Baymak'));
 const Baxi = React.lazy(() => import('./Pages/Baxi'))
 const Viessmann = React.lazy(() => import('./Pages/Viessmann'))
 const Ferroli = React.lazy(() => import('./Pages/Ferroli'))
+const Error = React.lazy(() => import('./Components/Error'));
 
 const App = () => {
 
@@ -39,6 +40,7 @@ const App = () => {
           <Route path='/baxi' element={<Baxi />} />
           <Route path='/viessmann' element={<Viessmann />} />
           <Route path='/ferroli' element={<Ferroli />} />
+          <Route path='*' element={<Error />} />
         </Routes>
       </Suspense>
       <Contact />
