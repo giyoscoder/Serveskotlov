@@ -1,6 +1,7 @@
 import React from 'react'
 import { extra_icon_img, heating_icon_img, setting_icon_img, pipes_icon_img, water_pressure_img, plumber_icon_img, } from '../Assets/Images';
-import {useTranslation} from 'react-i18next'
+import {useTranslation} from 'react-i18next';
+
 const ContourService = () => {
     const {t} = useTranslation('contourService')
     return (

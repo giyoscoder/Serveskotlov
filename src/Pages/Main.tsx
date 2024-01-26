@@ -20,7 +20,7 @@ const Main = () => {
             <ContourService />
             <Experience />
             <Comments />
-            <Contact />
+            {/* <Contact /> */}
         </section>
     )
 }

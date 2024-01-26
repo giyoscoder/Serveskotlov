@@ -51,3 +51,25 @@ export {default as third_slider_two } from './напольных_second_img.jpg'
 export {default as fourth_slider_one} from './профилактика_one_img.jpg'
 
 //five slider imgs 
+
+
+// =============================== Brands images ==========================
+
+export {default as brand_showcase} from './brand_showcase.png';
+
+// icons
+export {default as icon_dilever} from './icon_dilever.png';
+export {default as icon_boiler} from './icon_boiler.png';
+export {default as icon_boiler_repair} from './icon_boiler_repair.png';
+export {default as icon_two_boiler} from './icon_two_boiler.png';
+export {default as icon_wall_repair} from './icon_wall_repair.png';
+export {default as icon_setting} from './icon_setting.png';
+export {default as icon_remont} from './icon_remont.png';
+export {default as icon_clean} from './icon_clean.png';
+export {default as icon_pipes} from './icon_pipes.svg'
+export {default as icon_elector} from './icon_elector.png'
+export {default as icon_faulty} from './icon_faulty.png';
+export{default as icon_ventilation} from './icon_ventilation.png'
+export {default as icon_filter} from './icon_filter.png';
+
+
