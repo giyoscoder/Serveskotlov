@@ -5,7 +5,7 @@ import { BsTelephone } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { logo } from '../Assets/Images'
 import { useTranslation } from 'react-i18next'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, NavLink } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -15,6 +15,7 @@ const Navbar = () => {
     const [lang, setLang] = useState('Ru');
     const [navDrop, setNavDrop] = useState(false)
     const [locationPath, setLocationPath] = useState(false);
+    const [brands, setBrands] = useState(false)
 
     const navbarHadler = () => {
         setNavbar(prev => !prev)
@@ -51,6 +52,21 @@ const Navbar = () => {
                         </Link>
                         <ul className='hidden md:flex items-center  cursor-pointer gap-5 lg:gap-[32px] text-base font-medium font-jura'>
                             {locationPath && <li><Link to='services' spy={true} smooth={true} offset={-150}>{t('reviews')}</Link></li>}
+                            {locationPath && <div className='relative'>
+                                <div onClick={() => setBrands(prev => !prev)} className='flex items-center gap-1'><span>Котлы</span><IoIosArrowDown className={`${brands && 'rotate-180 '} transitio duration-100 text-lightColor mt-1`} /></div>
+                                <div className={`w-[200px] text-base transition-all duration-300 flex flex-col text-lightColor font-semibold bg-white shadow-md absolute rounded-2xl ${brands ? 'opacity-1 top-full' : 'opacity-0 top-9'} `}>
+                                    <NavLink to='airfel' className={`p-[10px] rounded-t-2xl transition-all duration-300 hover:bg-mainColor hover:text-white`}>Airfel</NavLink>
+                                    {/* <NavLink to='' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Ariston</NavLink> */}
+                                    <NavLink to='/atlantic' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Atlantic</NavLink>
+                                    <NavLink to='' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Baymak</NavLink>
+                                    <NavLink to='/baxi' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Baxi</NavLink>
+                                    <NavLink to='/ferroli' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Ferroli</NavLink>
+                                    <NavLink to='/kiturami' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Kiturami</NavLink>
+                                    {/* <NavLink to='' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Rulls</NavLink> */}
+                                    <NavLink to='/unit' className={`p-[10px] transition-all duration-300 hover:bg-mainColor hover:text-white`}>Unit</NavLink>
+                                    <NavLink to='/viessmann' className={`p-[10px] rounded-b-2xl transition-all duration-300 hover:bg-mainColor hover:text-white`}>Viessmann</NavLink>
+                                </div>
+                            </div>}
                             <li><Link to='about' spy={true} smooth={true} offset={-100}>{t('companies')}</Link></li>
                             {locationPath && <li><Link to='comments' spy={true} smooth={true} offset={-150}>{t('help')}</Link></li>}
                             <li><Link to='contact' spy={true} smooth={true} offset={-100}>{t('contact')}</Link></li>
