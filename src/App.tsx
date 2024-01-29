@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { favicon } from './Assets/Images'
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,12 +19,15 @@ const Ferroli = React.lazy(() => import('./Pages/Ferroli'))
 const Error = React.lazy(() => import('./Components/Error'));
 
 const App = () => {
+  const { pathname } = useLocation()
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const link: any = document.querySelector('link[rel="icon"]');
 
     link.setAttribute('href', 'https://api.serveskotkov.uz/storage/01HMK7KFQ9EAVDJY2Y72PKW1QD.png');
-  }, []);
+  }, [pathname]);
+
 
   return (
     <div className='bg-white'>
@@ -41,7 +44,7 @@ const App = () => {
           <Route path='/viessmann' element={<Viessmann />} />
           <Route path='/ferroli' element={<Ferroli />} />
           <Route path='*' element={<Error />} />
-          <Route/>
+          <Route />
         </Routes>
       </Suspense>
       <Contact />
